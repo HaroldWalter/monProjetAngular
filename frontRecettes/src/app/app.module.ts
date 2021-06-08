@@ -11,6 +11,9 @@ import { MenuComponent } from './menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +27,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
     AppRoutingModule,
     BrowserAnimationsModule,
     CollapseModule.forRoot(),
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
