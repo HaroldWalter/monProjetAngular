@@ -8,6 +8,9 @@ import { ListeRecettesComponent } from './pages/liste-recettes/liste-recettes.co
 import { DetailsRecetteComponent } from './pages/details-recette/details-recette.component';
 import { MenuComponent } from './menu/menu.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,9 @@ import { MenuComponent } from './menu/menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CollapseModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
