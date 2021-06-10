@@ -5,6 +5,7 @@ import { Materiel } from './materiel';
 
 export class Recette {
   constructor(
+    public id: string,
     public nom: string,
     public indicateurs: Indicateurs,
     public materiel: Materiel[],

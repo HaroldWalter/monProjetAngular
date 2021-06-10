@@ -1,7 +1,8 @@
 figure {
-   height: 30vh;
+   height: 100%;
 }
 
 .card-img-top {
    object-fit: cover;
+   cursor: pointer;
 }

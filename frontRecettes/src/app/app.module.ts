@@ -13,6 +13,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { MiniatureComponent } from './pages/liste-recettes/miniature/miniature.component';
+import { SlideComponent } from './pages/accueil/slide/slide.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MiniatureComponent } from './pages/liste-recettes/miniature/miniature.c
     ListeRecettesComponent,
     DetailsRecetteComponent,
     MenuComponent,
-    MiniatureComponent
+    MiniatureComponent,
+    SlideComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@
       class="card-img-top h-100 w-100"
       [src]="uneRecette.photo"
       [alt]="uneRecette.nom"
+      [routerLink]="['/detailsRecette', uneRecette.id]"
     />
   </figure>
   <div class="card-body">
