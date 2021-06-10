@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { MiniatureComponent } from './pages/liste-recettes/miniature/miniature.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     AccueilComponent,
     ListeRecettesComponent,
     DetailsRecetteComponent,
-    MenuComponent
+    MenuComponent,
+    MiniatureComponent
   ],
   imports: [
     BrowserModule,

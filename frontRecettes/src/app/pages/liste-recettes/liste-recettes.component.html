@@ -1,1 +1,5 @@
-<p>liste-recettes works!</p>
+<div class="container-fluid p-3">
+   <div class="d-flex align-items-stretch flex-wrap">
+       <app-miniature class="mt-2 mb-2 col-md-3" *ngFor="let recette of tabRecettes" [uneRecette]="recette"></app-miniature>
+   </div>
+</div>

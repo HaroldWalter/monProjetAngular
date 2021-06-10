@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecetteService } from 'src/app/services/recette.service';
 
 @Component({
   selector: 'app-accueil',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccueilComponent implements OnInit {
 
-  constructor() { }
+  public nombreDeRecette: number;
+
+  constructor(private monServiceRecette : RecetteService) {
+    this.nombreDeRecette = this.monServiceRecette.getRecette().length
+   }
 
   ngOnInit(): void {
   }
