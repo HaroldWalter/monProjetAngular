@@ -16,6 +16,7 @@ import { MiniatureComponent } from './pages/liste-recettes/miniature/miniature.c
 import { SlideComponent } from './pages/accueil/slide/slide.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { environment } from '../environments/environment';
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

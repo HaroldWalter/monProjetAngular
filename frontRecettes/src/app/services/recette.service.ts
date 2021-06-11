@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Etapes } from '../modeles/etapes';
 import { Indicateurs } from '../modeles/indicateurs';
@@ -10,7 +11,9 @@ import { Recette } from '../modeles/recette';
 })
 export class RecetteService {
   private tabRecettes :Recette[];
-  constructor() { 
+  constructor(private http : HttpClient) { 
+this.http.get("https://api-recettes.herokuapp.com/recettes").toPromise();
+
     this.tabRecettes = [
       new Recette(
         "78qds478s",
