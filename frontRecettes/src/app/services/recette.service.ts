@@ -49,9 +49,9 @@ export class RecetteService {
                   r.indicateurs.cout,
                   r.indicateurs.nombre_personnes
                 ),
-                r.materielsRecette,
-                r.ingredientsRecette,
-                r.etapesRecette,
+                materielsRecette,
+                ingredientsRecette,
+                etapesRecette,
                 r.favoris,
                 r.imageUrl
               )

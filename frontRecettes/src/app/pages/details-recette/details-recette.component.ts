@@ -17,13 +17,15 @@ export class DetailsRecetteComponent implements OnInit {
 
     if (idParam) {
       this.recetteAffichee = recetteService.getRecette(idParam);
-      if(this.recetteAffichee!==undefined)
-      console.log(this.recetteAffichee.etapes);
+     
       }
     
   }
 
   ngOnInit(): void {
+    if(this.recetteAffichee!==undefined)
+      console.log(this.recetteAffichee);
   }
+  
 
 }

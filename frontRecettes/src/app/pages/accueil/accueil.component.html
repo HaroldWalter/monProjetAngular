@@ -1,7 +1,16 @@
-
 <carousel class="w-100 h-100" [noPause]="false">
- 
-  <app-slide *ngFor="let recette of tabRecettesFavorites" [recette]="recette"
-  ></app-slide>
-
+  <ng-container *ngFor="let recette of recettes">
+    <slide class="w-100 h-100" *ngIf="recette.recetteFavori">
+      <figure class="m-0">
+        <img
+          class="w-100 h-100 imageSlide"
+          [src]="recette.photo"
+          [alt]="recette.nom"
+        />
+      </figure>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>{{ recette.nom }}</h3>
+      </div>
+    </slide>
+  </ng-container>
 </carousel>

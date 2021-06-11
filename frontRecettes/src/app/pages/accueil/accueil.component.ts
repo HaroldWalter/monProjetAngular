@@ -9,12 +9,14 @@ import { RecetteService } from 'src/app/services/recette.service';
 })
 export class AccueilComponent implements OnInit {
   
-  public tabRecettesFavorites: Recette[];
+  public recettes: Recette[];
+  
   
   constructor(private monServiceRecette: RecetteService) {
-    this.tabRecettesFavorites = this.monServiceRecette
-      .getRecettes()
-      .filter((x) => x.recetteFavori == true);
+    this.recettes = monServiceRecette
+      .getRecettes();
+     
+
     
   }
 
