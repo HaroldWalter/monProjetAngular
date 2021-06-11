@@ -1,4 +1,9 @@
-
+<div class="h-100">
 <carousel class="w-100 h-100" [noPause]="false">
-  <app-slide *ngFor="let recette of tabRecettesFavorites" [uneRecette]="recette"></app-slide>
-  
+  <ng-container *ngFor="let recette of tabRecettesFavorites"  [uneRecette]="recette">
+  <app-slide
+       
+  ></app-slide>
+</ng-container>
+</carousel>
+</div>
