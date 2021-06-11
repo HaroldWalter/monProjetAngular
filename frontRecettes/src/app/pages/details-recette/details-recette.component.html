@@ -1,1 +1,56 @@
-<p>details-recette works!</p>
+<div class="card w-100 h-100" *ngIf="recetteAffichee">
+  <figure class="m-0">
+    <img
+      class="card-img-top w-100 h-100 imageSlide"
+      [src]="recetteAffichee.photo"
+      [alt]="recetteAffichee.nom"
+    />
+  </figure>
+  <div class="card-body">
+    <h5 class="card-title d-flex justify-content-center align-item-center ">
+      {{ recetteAffichee.nom }}
+    </h5>
+  </div>
+
+  <div class="d-flex align-item-center justify-content-between ml-3">
+    <div>
+      <i
+        class="bi-cash ml-1"
+        *ngFor="let n of [].constructor(recetteAffichee.indicateurs.cout)"
+      ></i>
+    </div>
+    <div>
+      <i
+        class="bi-trophy-fill ml-1"
+        *ngFor="let n of [].constructor(recetteAffichee.indicateurs.difficulte)"
+      ></i>
+    </div>
+  </div>
+
+  <div class="card-footer d-flex align-items-center justify-content-between">
+    <span class="text-muted font-italic">
+      <i class="bi bi-hourglass-split">
+        {{ recetteAffichee.indicateurs.tpsPreparation }} min.</i
+      >
+    </span>
+    <span class="text-muted font-italic ml-2">
+      <i class="bi bi-thermometer-half">
+        {{ recetteAffichee.indicateurs.tpsCuisson }} min.</i
+      >
+    </span>
+    <span class="text-muted font-italic ml-2">
+      <i class="bi bi-water">
+        {{ recetteAffichee.indicateurs.tpsVaisselle }} min.</i
+      >
+    </span>
+  </div>
+  <div *ngFor="let etape of recetteAffichee.etapes" class="d-flex justify-content-between align-item-center ml-4">
+    <p>
+      {{ etape.ordre }}
+    </p>
+    <p>{{ etape.description }}</p>
+    <div *ngIf="etape.obligatoire">
+      <i class="bi bi-star-fill"></i>
+    </div>
+  </div>
+</div>
