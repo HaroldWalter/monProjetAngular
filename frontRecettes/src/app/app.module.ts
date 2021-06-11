@@ -14,6 +14,8 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { MiniatureComponent } from './pages/liste-recettes/miniature/miniature.component';
 import { SlideComponent } from './pages/accueil/slide/slide.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -31,7 +33,13 @@ import { SlideComponent } from './pages/accueil/slide/slide.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     CollapseModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
