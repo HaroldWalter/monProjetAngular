@@ -12,7 +12,14 @@ import { Recette } from '../modeles/recette';
 export class RecetteService {
   private tabRecettes :Recette[];
   constructor(private http : HttpClient) { 
-this.http.get("https://api-recettes.herokuapp.com/recettes").toPromise();
+this.http.get("https://api-recettes.herokuapp.com/recettes").toPromise().then(
+  data => {
+
+  },
+  err => {
+    
+  }
+);
 
     this.tabRecettes = [
       new Recette(
