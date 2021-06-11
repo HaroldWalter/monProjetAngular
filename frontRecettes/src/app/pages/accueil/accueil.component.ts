@@ -8,14 +8,14 @@ import { RecetteService } from 'src/app/services/recette.service';
   styleUrls: ['./accueil.component.css'],
 })
 export class AccueilComponent implements OnInit {
-  public nombreDeRecette: number;
+  
   public tabRecettesFavorites: Recette[];
   
   constructor(private monServiceRecette: RecetteService) {
     this.tabRecettesFavorites = this.monServiceRecette
       .getRecettes()
       .filter((x) => x.recetteFavori == true);
-    this.nombreDeRecette = this.monServiceRecette.getRecettes().length;
+    
   }
 
   ngOnInit(): void {}

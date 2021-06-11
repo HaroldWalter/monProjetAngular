@@ -7,7 +7,7 @@ import { Recette } from 'src/app/modeles/recette';
   styleUrls: ['./slide.component.css']
 })
 export class SlideComponent implements OnInit {
-  @Input() public uneRecette!: Recette;
+  @Input() public recette!: Recette;
   
   constructor() { }
 
