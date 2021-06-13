@@ -1,0 +1,7 @@
+figure {
+   height: 88.5vh;
+}
+
+.imageSlide {
+   object-fit: cover;
+}

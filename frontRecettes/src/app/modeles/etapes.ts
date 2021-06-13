@@ -4,4 +4,12 @@ export class Etapes {
     public description: string,
     public obligatoire: boolean
   ) {}
+
+  printToBack() : Object {
+    return {
+        ordre: this.ordre,
+        description: this.description,
+        obligatoire: this.obligatoire
+    }
+}
 }
